@@ -1,983 +1,1119 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hotel</title>
-    <script src="https://kit.fontawesome.com/e66429a8fe.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
+    <script
+      src="https://kit.fontawesome.com/e66429a8fe.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
 
-<body>
+  <body>
     <div id="loading_sec">
-        <svg version="1.1" id="loader-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-            width="40px" height="40px" viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
-            <path opacity="0.2" fill="#000" d="M20.201,5.169c-8.254,0-14.946,6.692-14.946,14.946c0,8.255,6.692,14.946,14.946,14.946
+      <svg
+        version="1.1"
+        id="loader-1"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        x="0px"
+        y="0px"
+        width="40px"
+        height="40px"
+        viewBox="0 0 40 40"
+        enable-background="new 0 0 40 40"
+        xml:space="preserve"
+      >
+        <path
+          opacity="0.2"
+          fill="#000"
+          d="M20.201,5.169c-8.254,0-14.946,6.692-14.946,14.946c0,8.255,6.692,14.946,14.946,14.946
             s14.946-6.691,14.946-14.946C35.146,11.861,28.455,5.169,20.201,5.169z M20.201,31.749c-6.425,0-11.634-5.208-11.634-11.634
-            c0-6.425,5.209-11.634,11.634-11.634c6.425,0,11.633,5.209,11.633,11.634C31.834,26.541,26.626,31.749,20.201,31.749z"/>
-            <path fill="#000" d="M26.013,10.047l1.654-2.866c-2.198-1.272-4.743-2.012-7.466-2.012h0v3.312h0
-            C22.32,8.481,24.301,9.057,26.013,10.047z">
-            <animateTransform attributeType="xml"
-                attributeName="transform"
-                type="rotate"
-                from="0 20 20"
-                to="360 20 20"
-                dur="0.5s"
-                repeatCount="indefinite"/>
-            </path>
-        </svg>
-    </div> 
+            c0-6.425,5.209-11.634,11.634-11.634c6.425,0,11.633,5.209,11.633,11.634C31.834,26.541,26.626,31.749,20.201,31.749z"
+        />
+        <path
+          fill="#000"
+          d="M26.013,10.047l1.654-2.866c-2.198-1.272-4.743-2.012-7.466-2.012h0v3.312h0
+            C22.32,8.481,24.301,9.057,26.013,10.047z"
+        >
+          <animateTransform
+            attributeType="xml"
+            attributeName="transform"
+            type="rotate"
+            from="0 20 20"
+            to="360 20 20"
+            dur="0.5s"
+            repeatCount="indefinite"
+          />
+        </path>
+      </svg>
+    </div>
     <div class="offcanvas"></div>
     <section class="hide_nav" id="hide-js">
-        <div class="hide_container" id="hide-container">
-            <div class="hide_nav_close">
-                <i class="fas fa-times" id="hide-closeBtn"></i>
+      <div class="hide_container" id="hide-container">
+        <div class="hide_nav_close">
+          <i class="fas fa-times" id="hide-closeBtn"></i>
+        </div>
+        <div class="language">
+          <img
+            src="images/flag.png"
+            alt="united kingdom flag"
+            style="margin: 0 5px"
+          />
+          <span>English</span>
+          <i class="fas fa-angle-down" style="margin: 0 5px"></i>
+          <ul class="country">
+            <li>English</li>
+            <li>Korea</li>
+            <li>china</li>
+          </ul>
+        </div>
+        <div class="nav_submit">
+          <span>Submit Property</span>
+        </div>
+        <ul class="main_nav">
+          <li><a href="/">HOME</a></li>
+          <li><a href="/property">PROPERTY</a></li>
+          <li><a href="#">AGETS</a></li>
+          <li><a href="#">NEWS</a></li>
+          <li><a href="/pages">PAGES</a></li>
+          <li><a href="#">CONTACT</a></li>
+        </ul>
+        <ul class="info_sec">
+          <li>
+            <div class="info_img">
+              <i class="fas fa-phone-alt"></i>
             </div>
-            <div class="language">
-                <img src="images/flag.png" alt="united kingdom flag" style="margin: 0 5px;">
-                <span>English</span>
-                <i class="fas fa-angle-down" style="margin: 0 5px"></i>
-                <ul class="country">
-                    <li>English</li>
-                    <li>Korea</li>
-                    <li>china</li>
-                </ul>
+            <div class="info_text">
+              <p>Phone:</p>
+              <p>(+82) 1234 5678</p>
             </div>
-            <div class="nav_submit">
-                <span>Submit Property</span>
+          </li>
+          <li>
+            <div class="info_img">
+              <i class="fas fa-map"></i>
             </div>
-            <ul class="main_nav">
-            <li><a href="#">HOME</a></li>
-            <li><a href="#">PROPERTY</a></li>
-            <li><a href="#">AGETS</a></li>
-            <li><a href="#">NEWS</a></li>
-            <li><a href="#">PAGES</a></li>
-            <li><a href="#">CONTACT</a></li>
-            </ul>
-            <ul class="info_sec">
-            <li>
-                <div class="info_img">
-                    <i class="fas fa-phone-alt"></i>
-                </div>
-                <div class="info_text">
-                    <p>Phone:</p>
-                    <p>(+82) 1234 5678</p>
-                </div>
-            </li>
-            <li>
-                <div class="info_img">
-                    <i class="fas fa-map"></i>
-                </div>
-                <div class="info_text">
-                    <p>Address:</p>
-                    <p>16 Creek Ave, NY</p>
-                </div>
-            </li>
-            <li>
-                <div class="info_img">
-                    <i class="fas fa-envelope"></i>
-                </div>
-                <div class="info_text">
-                    <p>Email</p>
-                    <p>hyebin@gmail.com</p>
-                </div>
-            </li>
-            </ul>
-        </div>    
+            <div class="info_text">
+              <p>Address:</p>
+              <p>16 Creek Ave, NY</p>
+            </div>
+          </li>
+          <li>
+            <div class="info_img">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="info_text">
+              <p>Email</p>
+              <p>hyebin@gmail.com</p>
+            </div>
+          </li>
+        </ul>
+      </div>
     </section>
     <nav>
-        <div class="nav_container container">
-            <ul class="main_nav">
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="property.html">PROPERTY</a></li>
-                <li><a href="#">AGETS</a></li>
-                <li><a href="#">NEWS</a></li>
-                <li><a href="pages.html">PAGES</a></li>
-                <li><a href="#">CONTACT</a></li>
+      <div class="nav_container container">
+        <ul class="main_nav">
+          <li><a href="/">HOME</a></li>
+          <li><a href="/property">PROPERTY</a></li>
+          <li><a href="#">AGETS</a></li>
+          <li><a href="#">NEWS</a></li>
+          <li><a href="/pages">PAGES</a></li>
+          <li><a href="#">CONTACT</a></li>
+        </ul>
+        <div class="sub_menu">
+          <div class="language">
+            <img
+              src="images/flag.png"
+              alt="united kingdom flag"
+              style="margin: 0 5px"
+            />
+            <span>English</span>
+            <i class="fas fa-angle-down" style="margin: 0 5px"></i>
+            <ul>
+              <li>English</li>
+              <li>Korea</li>
+              <li>china</li>
             </ul>
-            <div class="sub_menu">
-                <div class="language">
-                    <img src="images/flag.png" alt="united kingdom flag" style="margin: 0 5px;">
-                    <span>English</span>
-                    <i class="fas fa-angle-down" style="margin: 0 5px"></i>
-                    <ul>
-                        <li>English</li>
-                        <li>Korea</li>
-                        <li>china</li>
-                    </ul>
-                </div>
-                <div class="nav_submit">
-                    <span style="color:#1bcbe6">Submit Property</span>
-                </div>
-            </div>
+          </div>
+          <div class="nav_submit">
+            <span style="color: #1bcbe6">Submit Property</span>
+          </div>
         </div>
+      </div>
     </nav>
     <header>
-        <div class="header_container container">
-            <div class="logo_sec">
-                <img src="images/logo.png" alt="azenta logo">
-            </div>
-            <ul class="info_sec">
-                <li>
-                    <div class="info_img">
-                        <i class="fas fa-phone-alt"></i>
-                    </div>
-                    <div>
-                        <p>Phone:</p>
-                        <p>(+82) 1234 5678</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="info_img">
-                        <i class="fas fa-map"></i>
-                    </div>
-                    <div>
-                        <p>Address:</p>
-                        <p>16 Creek Ave, NY</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="info_img">
-                        <i class="fas fa-envelope"></i>
-                    </div>
-                    <div>
-                        <p>Email</p>
-                        <p>hyebin@gmail.com</p>
-                    </div>
-                </li>
-            </ul>
-            <span class="menu" id="menu">
-                <div id="bar1" class="change bar"></div>
-                <div id="bar2" class="change bar"></div>
-                <div id="bar3" class="change bar"></div>
-            </span>
+      <div class="header_container container">
+        <div class="logo_sec">
+          <img src="images/logo.png" alt="azenta logo" />
         </div>
-        
+        <ul class="info_sec">
+          <li>
+            <div class="info_img">
+              <i class="fas fa-phone-alt"></i>
+            </div>
+            <div>
+              <p>Phone:</p>
+              <p>(+82) 1234 5678</p>
+            </div>
+          </li>
+          <li>
+            <div class="info_img">
+              <i class="fas fa-map"></i>
+            </div>
+            <div>
+              <p>Address:</p>
+              <p>16 Creek Ave, NY</p>
+            </div>
+          </li>
+          <li>
+            <div class="info_img">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div>
+              <p>Email</p>
+              <p>hyebin@gmail.com</p>
+            </div>
+          </li>
+        </ul>
+        <span class="menu" id="menu">
+          <div id="bar1" class="change bar"></div>
+          <div id="bar2" class="change bar"></div>
+          <div id="bar3" class="change bar"></div>
+        </span>
+      </div>
     </header>
     <main>
-        <div class="greeting_sec">
-            <div class= "greeting_slider_container">
-                <ul id="greeting-js" class="greeting_slider_ul">
-                    <li class="greeting_slider_list greeting_active">
-                        <div class="greeting_text">
-                            <a href="#">
-                                <div class="greeting_text_container">
-                                    <span><i class="fas fa-map-marker-alt"></i>9721 Glen Creek Ave. Ballston Spa, Ny</span>
-                                    <h2>Villa 9721 Glen Creek</h2>
-                                    <ul class="greeting_text_middle">
-                                        <span>Start Form:</span>
-                                        <h3>$9.000.000</h3>
-                                    </ul>
-                                    <ul>
-                                        <li>
-                                            <p><i class="fas fa-arrows-alt"></i></p>
-                                            <p>5201 sqft</p>
-                                        </li>
-                                        <li>
-                                            <p><i class="fas fa-bed"></i></p>
-                                            <p>8 Bed Rooms</p>
-                                        </li>
-                                        <li>
-                                            <p><i class="fas fa-shower"></i></p>
-                                            <p>7 Baths Bed</p>
-                                        </li>
-                                        <li>
-                                            <p><i class="fas fa-car"></i></p>
-                                            <p>2 Garage</p>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </a>
-                        </div>
-                    </li>
-                    <li class="greeting_slider_list closed">
-                        <div class="greeting_text">
-                            <a href="#">
-                                <div class="greeting_text_container">
-                                    <span><i class="fas fa-map-marker-alt"></i>2760 Orange County . Solla Spa, LA</span>
-                                    <h2>Villa 3000 New City</h2>
-                                    <ul class="greeting_text_middle">
-                                        <span>Start Form:</span>
-                                        <h3>$3.000.000</h3>
-                                    </ul>
-                                    <ul>
-                                        <li>
-                                            <p><i class="fas fa-arrows-alt"></i></p>
-                                            <p>3200 sqft</p>
-                                        </li>
-                                        <li>
-                                            <p><i class="fas fa-bed"></i></p>
-                                            <p>4 Bed Rooms</p>
-                                        </li>
-                                        <li>
-                                            <p><i class="fas fa-shower"></i></p>
-                                            <p>2 Baths Bed</p>
-                                        </li>
-                                        <li>
-                                            <p><i class="fas fa-car"></i></p>
-                                            <p>2 Garage</p>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </a>
-                        </div>
-                    </li>
-                    <li class="greeting_slider_list closed">
-                        <div class="greeting_text">
-                            <a href="#">
-                                <div class="greeting_text_container">
-                                    <span><i class="fas fa-map-marker-alt"></i>1002 Kimchi . chun Spa, Korea</span>
-                                    <h2>Apartment hyebin</h2>
-                                    <ul class="greeting_text_middle">
-                                        <span>Start Form:</span>
-                                        <h3>$8.000.000</h3>
-                                    </ul>
-                                    <ul>
-                                        <li>
-                                            <p><i class="fas fa-arrows-alt"></i></p>
-                                            <p>566 sqft</p>
-                                        </li>
-                                        <li>
-                                            <p><i class="fas fa-bed"></i></p>
-                                            <p>2 Bed Rooms</p>
-                                        </li>
-                                        <li>
-                                            <p><i class="fas fa-shower"></i></p>
-                                            <p>2 Baths Bed</p>
-                                        </li>
-                                        <li>
-                                            <p><i class="fas fa-car"></i></p>
-                                            <p>1 Garage</p>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </a>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-            <div class="thumbnail_box">
-                <ul class="thumbnail_ul" id="thumbnail_ul">
-                    <li>
-                        <a href="#">
-                            <img  data-slider="1" src="images/hero/hero-1.jpg" alt="">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img  data-slider="2" src="images/hero/hero-2.jpg" alt="">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img data-slider="3" src="images/hero/hero-3.jpg" alt="">
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div class="search_title">
-                <div class="search_container container">
-                    <div class="search_left"><i class="fas fa-search"></i>FIND YOUR HOME</div>
-                    <div class="search_right"><i class="fas fa-home"></i>HOUSE FOR SELL</div>
-                </div>
-            </div>
-        </div>
-        <ul class="search_sec container">
-            <li>
-                <select name="villa" id="villa_select">
-                    <option value="">Villa & Pool</option>
-                </select>
-            </li>
-            <li>
-                <select name="Title" id="title_select">
-                    <option value="">Title</option>
-                </select>
-            </li>
-            <li>
-                <select name="city" id="city_select">
-                    <option value="">Any city</option>
-                </select>
-            </li>
-            <li>
-                <select name="Bethroom" id="bethroom_select">
-                    <option value="">Any Bethroom</option>
-                </select>
-            </li>
-            <li>
-                <select name="bedroom" id="bedroom_select">
-                    <option value="">Any Bedroom</option>
-                </select>
-            </li>
-            <li>
-                <div class="range_container">
-                    <p>price:</p>
-                    <input type="range" class="range">
-                </div>
-            </li>
-            <li>
-                <div class="range_container">
-                    <p>size:</p>
-                    <input type="range" min="0" max="1000000" value="500000" class="range">
-                </div>
-            </li>
-            <li>
-                <a href="#">Search</a>
-            </li>
-        </ul>
-        <div class="content01 container container-top-bottom">
-            <p class="title_p">FIND YOUR DREAM HOUSE</p>
-            <h1 class="title_h1">How It Work</h1>
-            <ul>
-                <li>
-                    <img src="images/howit-works/howit-works-1.png" alt="search& find apartment">
-                    <h3>Search & Find Apartment</h3>
-                    <span>Lorem ipsum dolor adipisicing elit. Pariatur architecto dolores eaque exercitationem in
-                        laborum nobis voluptas, repellat obcaecati, autem, sequi sunt maxime voluptate.</span>
-                </li>
-                <li>
-                    <img src="images/howit-works/howit-works-2.png" alt="find your room">
-                    <h3>Find Your Room</h3>
-                    <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt veritatis fuga officia
-                        quasi voluptatum deleniti obcaecati dolorem, earum illo ipsa eos sit?</span>
-                </li>
-                <li>
-                    <img src="images/howit-works/howit-works-3.png" alt="talk to agent">
-                    <h3>Talk To Agent</h3>
-                    <span>Lorem ipsum dolor sit, Suscipit, minima recusandae! Numquam magni minus maiores quidem
-                        consequuntur delectus perferendis aliquam corrupti consectetur, optio nemo</span>
-                </li>
-            </ul>
-        </div>
-        <div class="content02 container-top-bottom">
-            <div class="container">
-                <p class="title_p">LISTING FROM OUR AGENTS</p>
-                <h1 class="title_h1">Featured Properties</h1>
-                <div class="content02_sliderbox">
-                    <ul class="content02_slider">
-                        <li class="slider_content">
-                            <div class="content02_img">
-                                <img src="images/feature/feature-1.jpg" alt="first house">
-                                <span class="content02_txt_left feature_btn">FEAUTURE</span>
-                                <span class="content02_txt_right sale_btn">FOR SALE</span>
-                                <div class="content02_btm">
-                                    <img src="images/feature/f-author-1.jpg" alt="Jonathan Walters image">
-                                    <span class="content02_txt_btm">Jonathan Walters</span>
-                                </div>
-                            </div>
-                            <div class="content02_text">
-                                <h3>French Riviera Villa</h3>
-                                <div class="content02_text_middle">
-                                    <p><i class="fas fa-map-marker-alt"></i>180 New York Road, London</p>
-                                    <p><i class="fas fa-key"></i>Villa</p>
-                                </div>
-                                <div class="content02_text_btm">
-                                    <h3>$5900</h3>
-                                    <p>/month</p>
-                                </div>
-                            </div>
-                            <ul class="content02_info">
-                                <li><i class="fas fa-arrows-alt"></i>780 sqft</li>
-                                <li><i class="fas fa-bed"></i>4</li>
-                                <li><i class="fas fa-shower"></i>3</li>
-                                <li><i class="fas fa-car"></i>1</li>
-                            </ul>
-                        </li>
-                        <li class="slider_content">
-                            <div class="content02_img">
-                                <img src="images/feature/feature-2.jpg" alt="first house">
-                                <span class="content02_txt_left feature_btn">FEAUTURE</span>
-                                <span class="content02_txt_right sale_btn">FOR SALE</span>
-                                <div class="content02_btm">
-                                    <img src="images/feature/f-author-2.jpg" alt="Jonathan Walters image">
-                                    <span class="content02_txt_btm">Jonathan Walters</span>
-                                </div>
-                            </div>
-                            <div class="content02_text">
-                                <h3>Korea Riviera Villa</h3>
-                                <div class="content02_text_middle">
-                                    <p><i class="fas fa-map-marker-alt"></i>180 Jack Road, London,KR</p>
-                                    <p><i class="fas fa-key"></i>Apart</p>
-                                </div>
-                                <div class="content02_text_btm">
-                                    <h3>$1900</h3>
-                                    <p>/month</p>
-                                </div>
-                            </div>
-                            <ul class="content02_info">
-                                <li><i class="fas fa-arrows-alt"></i>780 sqft</li>
-                                <li><i class="fas fa-bed"></i>4</li>
-                                <li><i class="fas fa-shower"></i>3</li>
-                                <li><i class="fas fa-car"></i>1</li>
-                            </ul>
-                        </li>
-                        <li class="slider_content">
-                            <div class="content02_img">
-                                <img src="images/feature/feature-1.jpg" alt="first house">
-                                <span class="content02_txt_left feature_btn">FEAUTURE</span>
-                                <span class="content02_txt_right sale_btn">FOR SALE</span>
-                                <div class="content02_btm">
-                                    <img src="images/feature/f-author-1.jpg" alt="Jonathan Walters image">
-                                    <span class="content02_txt_btm">Jonathan Walters</span>
-                                </div>
-                            </div>
-                            <div class="content02_text">
-                                <h3>Japen Riviera Villa</h3>
-                                <div class="content02_text_middle">
-                                    <p><i class="fas fa-map-marker-alt"></i>180 Japen sola Road, London</p>
-                                    <p><i class="fas fa-key"></i>Villa</p>
-                                </div>
-                                <div class="content02_text_btm">
-                                    <h3>$9900</h3>
-                                    <p>/month</p>
-                                </div>
-                            </div>
-                            <ul class="content02_info">
-                                <li><i class="fas fa-arrows-alt"></i>300 sqft</li>
-                                <li><i class="fas fa-bed"></i>8</li>
-                                <li><i class="fas fa-shower"></i>2</li>
-                                <li><i class="fas fa-car"></i>2</li>
-                            </ul>
-                        </li>
-                        <li class="slider_content">
-                            <div class="content02_img">
-                                <img src="images/feature/feature-4.jpg" alt="first house">
-                                <span class="content02_txt_left feature_btn">FEAUTURE</span>
-                                <span class="content02_txt_right sale_btn">FOR SALE</span>
-                                <div class="content02_btm">
-                                    <img src="images/feature/f-author-1.jpg" alt="Jonathan Walters image">
-                                    <span class="content02_txt_btm">Jonathan Walters</span>
-                                </div>
-                            </div>
-                            <div class="content02_text">
-                                <h3>French Riviera Villa</h3>
-                                <div class="content02_text_middle">
-                                    <p><i class="fas fa-map-marker-alt"></i>180 New York Road, London</p>
-                                    <p><i class="fas fa-key"></i>Villa</p>
-                                </div>
-                                <div class="content02_text_btm">
-                                    <h3>$5900</h3>
-                                    <p>/month</p>
-                                </div>
-                            </div>
-                            <ul class="content02_info">
-                                <li><i class="fas fa-arrows-alt"></i>780 sqft</li>
-                                <li><i class="fas fa-bed"></i>4</li>
-                                <li><i class="fas fa-shower"></i>3</li>
-                                <li><i class="fas fa-car"></i>1</li>
-                            </ul>
-                        </li>
-                        <li class="slider_content">
-                            <div class="content02_img">
-                                <img src="images/feature/feature-5.jpg" alt="first house">
-                                <span class="content02_txt_left feature_btn">FEAUTURE</span>
-                                <span class="content02_txt_right sale_btn">FOR SALE</span>
-                                <div class="content02_btm">
-                                    <img src="images/feature/f-author-2.jpg" alt="Jonathan Walters image">
-                                    <span class="content02_txt_btm">Jonathan Walters</span>
-                                </div>
-                            </div>
-                            <div class="content02_text">
-                                <h3>Korea Riviera Villa</h3>
-                                <div class="content02_text_middle">
-                                    <p><i class="fas fa-map-marker-alt"></i>180 Jack Road, London,KR</p>
-                                    <p><i class="fas fa-key"></i>Apart</p>
-                                </div>
-                                <div class="content02_text_btm">
-                                    <h3>$1900</h3>
-                                    <p>/month</p>
-                                </div>
-                            </div>
-                            <ul class="content02_info">
-                                <li><i class="fas fa-arrows-alt"></i>780 sqft</li>
-                                <li><i class="fas fa-bed"></i>4</li>
-                                <li><i class="fas fa-shower"></i>3</li>
-                                <li><i class="fas fa-car"></i>1</li>
-                            </ul>
-                        </li>
-                        <li class="slider_content">
-                            <div class="content02_img">
-                                <img src="images/feature/feature-1.jpg" alt="first house">
-                                <span class="content02_txt_left feature_btn">FEAUTURE</span>
-                                <span class="content02_txt_right sale_btn">FOR SALE</span>
-                                <div class="content02_btm">
-                                    <img src="images/feature/f-author-1.jpg" alt="Jonathan Walters image">
-                                    <span class="content02_txt_btm">Jonathan Walters</span>
-                                </div>
-                            </div>
-                            <div class="content02_text">
-                                <h3>Japen Riviera Villa</h3>
-                                <div class="content02_text_middle">
-                                    <p><i class="fas fa-map-marker-alt"></i>180 Japen sola Road, London</p>
-                                    <p><i class="fas fa-key"></i>Villa</p>
-                                </div>
-                                <div class="content02_text_btm">
-                                    <h3>$9900</h3>
-                                    <p>/month</p>
-                                </div>
-                            </div>
-                            <ul class="content02_info">
-                                <li><i class="fas fa-arrows-alt"></i>300 sqft</li>
-                                <li><i class="fas fa-bed"></i>8</li>
-                                <li><i class="fas fa-shower"></i>2</li>
-                                <li><i class="fas fa-car"></i>2</li>
-                            </ul>
-                        </li>
+      <div class="greeting_sec">
+        <div class="greeting_slider_container">
+          <ul id="greeting-js" class="greeting_slider_ul">
+            <li class="greeting_slider_list greeting_active">
+              <div class="greeting_text">
+                <a href="#">
+                  <div class="greeting_text_container">
+                    <span
+                      ><i class="fas fa-map-marker-alt"></i>9721 Glen Creek Ave.
+                      Ballston Spa, Ny</span
+                    >
+                    <h2>Villa 9721 Glen Creek</h2>
+                    <ul class="greeting_text_middle">
+                      <span>Start Form:</span>
+                      <h3>$9.000.000</h3>
                     </ul>
+                    <ul>
+                      <li>
+                        <p><i class="fas fa-arrows-alt"></i></p>
+                        <p>5201 sqft</p>
+                      </li>
+                      <li>
+                        <p><i class="fas fa-bed"></i></p>
+                        <p>8 Bed Rooms</p>
+                      </li>
+                      <li>
+                        <p><i class="fas fa-shower"></i></p>
+                        <p>7 Baths Bed</p>
+                      </li>
+                      <li>
+                        <p><i class="fas fa-car"></i></p>
+                        <p>2 Garage</p>
+                      </li>
+                    </ul>
+                  </div>
+                </a>
+              </div>
+            </li>
+            <li class="greeting_slider_list closed">
+              <div class="greeting_text">
+                <a href="#">
+                  <div class="greeting_text_container">
+                    <span
+                      ><i class="fas fa-map-marker-alt"></i>2760 Orange County .
+                      Solla Spa, LA</span
+                    >
+                    <h2>Villa 3000 New City</h2>
+                    <ul class="greeting_text_middle">
+                      <span>Start Form:</span>
+                      <h3>$3.000.000</h3>
+                    </ul>
+                    <ul>
+                      <li>
+                        <p><i class="fas fa-arrows-alt"></i></p>
+                        <p>3200 sqft</p>
+                      </li>
+                      <li>
+                        <p><i class="fas fa-bed"></i></p>
+                        <p>4 Bed Rooms</p>
+                      </li>
+                      <li>
+                        <p><i class="fas fa-shower"></i></p>
+                        <p>2 Baths Bed</p>
+                      </li>
+                      <li>
+                        <p><i class="fas fa-car"></i></p>
+                        <p>2 Garage</p>
+                      </li>
+                    </ul>
+                  </div>
+                </a>
+              </div>
+            </li>
+            <li class="greeting_slider_list closed">
+              <div class="greeting_text">
+                <a href="#">
+                  <div class="greeting_text_container">
+                    <span
+                      ><i class="fas fa-map-marker-alt"></i>1002 Kimchi . chun
+                      Spa, Korea</span
+                    >
+                    <h2>Apartment hyebin</h2>
+                    <ul class="greeting_text_middle">
+                      <span>Start Form:</span>
+                      <h3>$8.000.000</h3>
+                    </ul>
+                    <ul>
+                      <li>
+                        <p><i class="fas fa-arrows-alt"></i></p>
+                        <p>566 sqft</p>
+                      </li>
+                      <li>
+                        <p><i class="fas fa-bed"></i></p>
+                        <p>2 Bed Rooms</p>
+                      </li>
+                      <li>
+                        <p><i class="fas fa-shower"></i></p>
+                        <p>2 Baths Bed</p>
+                      </li>
+                      <li>
+                        <p><i class="fas fa-car"></i></p>
+                        <p>1 Garage</p>
+                      </li>
+                    </ul>
+                  </div>
+                </a>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="thumbnail_box">
+          <ul class="thumbnail_ul" id="thumbnail_ul">
+            <li>
+              <a href="#">
+                <img data-slider="1" src="images/hero/hero-1.jpg" alt="" />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img data-slider="2" src="images/hero/hero-2.jpg" alt="" />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img data-slider="3" src="images/hero/hero-3.jpg" alt="" />
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="search_title">
+          <div class="search_container container">
+            <div class="search_left">
+              <i class="fas fa-search"></i>FIND YOUR HOME
+            </div>
+            <div class="search_right">
+              <i class="fas fa-home"></i>HOUSE FOR SELL
+            </div>
+          </div>
+        </div>
+      </div>
+      <ul class="search_sec container">
+        <li>
+          <select name="villa" id="villa_select">
+            <option value="">Villa & Pool</option>
+          </select>
+        </li>
+        <li>
+          <select name="Title" id="title_select">
+            <option value="">Title</option>
+          </select>
+        </li>
+        <li>
+          <select name="city" id="city_select">
+            <option value="">Any city</option>
+          </select>
+        </li>
+        <li>
+          <select name="Bethroom" id="bethroom_select">
+            <option value="">Any Bethroom</option>
+          </select>
+        </li>
+        <li>
+          <select name="bedroom" id="bedroom_select">
+            <option value="">Any Bedroom</option>
+          </select>
+        </li>
+        <li>
+          <div class="range_container">
+            <p>price:</p>
+            <input type="range" class="range" />
+          </div>
+        </li>
+        <li>
+          <div class="range_container">
+            <p>size:</p>
+            <input
+              type="range"
+              min="0"
+              max="1000000"
+              value="500000"
+              class="range"
+            />
+          </div>
+        </li>
+        <li>
+          <a href="#">Search</a>
+        </li>
+      </ul>
+      <div class="content01 container container-top-bottom">
+        <p class="title_p">FIND YOUR DREAM HOUSE</p>
+        <h1 class="title_h1">How It Work</h1>
+        <ul>
+          <li>
+            <img
+              src="images/howit-works/howit-works-1.png"
+              alt="search& find apartment"
+            />
+            <h3>Search & Find Apartment</h3>
+            <span
+              >Lorem ipsum dolor adipisicing elit. Pariatur architecto dolores
+              eaque exercitationem in laborum nobis voluptas, repellat
+              obcaecati, autem, sequi sunt maxime voluptate.</span
+            >
+          </li>
+          <li>
+            <img
+              src="images/howit-works/howit-works-2.png"
+              alt="find your room"
+            />
+            <h3>Find Your Room</h3>
+            <span
+              >Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Incidunt veritatis fuga officia quasi voluptatum deleniti
+              obcaecati dolorem, earum illo ipsa eos sit?</span
+            >
+          </li>
+          <li>
+            <img
+              src="images/howit-works/howit-works-3.png"
+              alt="talk to agent"
+            />
+            <h3>Talk To Agent</h3>
+            <span
+              >Lorem ipsum dolor sit, Suscipit, minima recusandae! Numquam magni
+              minus maiores quidem consequuntur delectus perferendis aliquam
+              corrupti consectetur, optio nemo</span
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="content02 container-top-bottom">
+        <div class="container">
+          <p class="title_p">LISTING FROM OUR AGENTS</p>
+          <h1 class="title_h1">Featured Properties</h1>
+          <div class="content02_sliderbox">
+            <ul class="content02_slider">
+              <li class="slider_content">
+                <div class="content02_img">
+                  <img src="images/feature/feature-1.jpg" alt="first house" />
+                  <span class="content02_txt_left feature_btn">FEAUTURE</span>
+                  <span class="content02_txt_right sale_btn">FOR SALE</span>
+                  <div class="content02_btm">
+                    <img
+                      src="images/feature/f-author-1.jpg"
+                      alt="Jonathan Walters image"
+                    />
+                    <span class="content02_txt_btm">Jonathan Walters</span>
+                  </div>
                 </div>
-            </div>
-            <div id="dot-js" style="text-align:center;">
-                <span data-dot="0" class="dot dot_act"></span>
-                <span data-dot="1" class="dot"></span>
-                <span data-dot="2" class="dot none_dot"></span>
-            </div>
-        </div>
-        <div class="content03">
-            <div class="video_sec">
-                <a id="video-js" href="#"><i class="fas fa-play"></i></a>
-            </div>
-            <h3>FIND THE PERFECT</h3>
-            <h2>Real Estate Agent Near You</h2>
-        </div>
-        <div class="content03_video" id="video_box">
-            <span id="video_close"><i class="fas fa-times"></i></span>
-            <video controls width="70%" height="70%">
-                <source src="/media/examples/flower.webm" type="video/webm">
-            </video>
-        </div>
-        <div class="content04">
-            <div class="container container-top-bottom">
-                <div class="content04_title">
-                    <div class="content04_title_left">
-                        <p class="title_p">TOP PROPERTY FOR YOU</p>
-                        <h1 class="title_h1">Top Properties</h1>
-                    </div>
-                    <div class="content04_title_right">
-                        <a href="#">View All Property</a>
-                    </div>
+                <div class="content02_text">
+                  <h3>French Riviera Villa</h3>
+                  <div class="content02_text_middle">
+                    <p>
+                      <i class="fas fa-map-marker-alt"></i>180 New York Road,
+                      London
+                    </p>
+                    <p><i class="fas fa-key"></i>Villa</p>
+                  </div>
+                  <div class="content02_text_btm">
+                    <h3>$5900</h3>
+                    <p>/month</p>
+                  </div>
                 </div>
-                <div class="content04_box">
-                    <div class="content04_sliderbox">
-                        <ul class="content04_cnt">
-                            <li class="content04_slider">
-                                <div class="content04_cnt_img">
-                                    <img src="images/properties/property-1.jpg" alt="">
-                                </div>
-                                <div class="content04_cnt_text">
-                                    <span class="sale_btn">FOR SALE</span>
-                                    <h2>Villa 9721 Glen Creek</h2>
-                                    <div class="content04_cnt_text_middle">
-                                        <span>Start From:</span>
-                                        <h3>$3.000.000</h3>
-                                        <p><i class="fas fa-map-marker-alt"></i>9721 Glen Creek Ave. Ballston spa,NY</p>
-                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus, minus
-                                            non! Voluptatibus doloremque beatae molestiae aperiam illo libero laborum
-                                            quibusdam repellat excepturi mollitia aliquid .</p>
-                                    </div>
-                                    <ul>
-                                        <li><i class="fas fa-arrows-alt"></i>5201</li>
-                                        <li><i class="fas fa-bed"></i>8 Bed Rooms</li>
-                                        <li><i class="fas fa-shower"></i>7 Bath Rooms</li>
-                                        <li><i class="fas fa-car"></i>1 Garage</li>
-                                    </ul>
-                                    <p class="contact">Contact:(+82) 82 7951</p>
-                                </div>
-                            </li>
-                            <li class="content04_slider">
-                                <div class="content04_cnt_img">
-                                    <img src="images/properties/property-2.jpg" alt="">
-                                </div>
-                                <div class="content04_cnt_text">
-                                    <span class="sale_btn">FOR SALE</span>
-                                    <h2>Villa 9721 Glen Creek</h2>
-                                    <div class="content04_cnt_text_middle">
-                                        <span>Start From:</span>
-                                        <h3>$3.000.000</h3>
-                                        <p><i class="fas fa-map-marker-alt"></i>9721 Glen Creek Ave. Ballston spa,NY</p>
-                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus, minus
-                                            non! Voluptatibus doloremque beatae molestiae aperiam illo libero laborum
-                                            quibusdam repellat excepturi mollitia aliquid .</p>
-                                    </div>
-                                    <ul>
-                                        <li><i class="fas fa-arrows-alt"></i>5201</li>
-                                        <li><i class="fas fa-bed"></i>8 Bed Rooms</li>
-                                        <li><i class="fas fa-shower"></i>7 Bath Rooms</li>
-                                        <li><i class="fas fa-car"></i>1 Garage</li>
-                                    </ul>
-                                    <p class="contact"style="bottom:0;padding-top:30px;">Contact:(+82) 82 7951</p>
-                                </div>
-                            </li>
-                            <li class="content04_slider">
-                                <div class="content04_cnt_img">
-                                    <img src="images/properties/property-3.jpg" alt="">
-                                </div>
-                                <div class="content04_cnt_text">
-                                    <span class="sale_btn">FOR SALE</span>
-                                    <h2>Villa 9721 Glen Creek</h2>
-                                    <div class="content04_cnt_text_middle">
-                                        <span>Start From:</span>
-                                        <h3>$3.000.000</h3>
-                                        <p><i class="fas fa-map-marker-alt"></i>9721 Glen Creek Ave. Ballston spa,NY</p>
-                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus, minus
-                                            non! Voluptatibus doloremque beatae molestiae aperiam illo libero laborum
-                                            quibusdam repellat excepturi mollitia aliquid .</p>
-                                    </div>
-                                    <ul>
-                                        <li><i class="fas fa-arrows-alt"></i>5201</li>
-                                        <li><i class="fas fa-bed"></i>8 Bed Rooms</li>
-                                        <li><i class="fas fa-shower"></i>7 Bath Rooms</li>
-                                        <li><i class="fas fa-car"></i>1 Garage</li>
-                                    </ul>
-                                    <p class="contact"style="bottom:0;padding-top:30px;">Contact:(+82) 82 7951</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="content04_left_arw arrow"><i class="fas fa-angle-left"></i></div>
-                    <div class="content04_right_arw arrow"><i class="fas fa-angle-left"></i></div>
+                <ul class="content02_info">
+                  <li><i class="fas fa-arrows-alt"></i>780 sqft</li>
+                  <li><i class="fas fa-bed"></i>4</li>
+                  <li><i class="fas fa-shower"></i>3</li>
+                  <li><i class="fas fa-car"></i>1</li>
+                </ul>
+              </li>
+              <li class="slider_content">
+                <div class="content02_img">
+                  <img src="images/feature/feature-2.jpg" alt="first house" />
+                  <span class="content02_txt_left feature_btn">FEAUTURE</span>
+                  <span class="content02_txt_right sale_btn">FOR SALE</span>
+                  <div class="content02_btm">
+                    <img
+                      src="images/feature/f-author-2.jpg"
+                      alt="Jonathan Walters image"
+                    />
+                    <span class="content02_txt_btm">Jonathan Walters</span>
+                  </div>
                 </div>
-            </div>
-        </div>
-        <div class="content05 container-top-bottom">
-            <div class="container">
-                <p class="title_p">WE ARE TO HELP YOU</p>
-                <h1 class="title_h1">Our Agents</h1>
-                <div class="contentbx">
-                    <div class="content05_sliderbox">
-                        <ul id="agent-js">
-                            <li>
-                                <div class="content05_sliderlist_box">
-                                    <div class="content05_img">
-                                    <img src="images/agent/agent-1.jpg" alt="Matthew Robbins image">
-                                    <div class="content05_icons">
-                                        <a href="#" class="twitter">
-                                            <i class="fab fa-twitter"></i>
-                                        </a>
-                                        <a href="#" class="instagram">
-                                            <i class="fab fa-instagram"></i>
-                                        </a>
-                                        <a href="#" class="facebook">
-                                            <i class="fab fa-facebook-f"></i>
-                                        </a>
-                                    </div>
-                                    </div>
-                                    <h2>Matthew Robbins</h2>
-                                    <p>Founder & Ceo</p>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="content05_sliderlist_box">
-                                    <div class="content05_img">
-                                    <img src="images/agent/agent-2.jpg" alt="">
-                                    <div class="content05_icons">
-                                        <a href="#" class="twitter">
-                                            <i class="fab fa-twitter"></i>
-                                        </a>
-                                        <a href="#" class="instagram">
-                                            <i class="fab fa-instagram"></i>
-                                        </a>
-                                        <a href="#" class="facebook">
-                                            <i class="fab fa-facebook-f"></i>
-                                        </a>
-                                    </div>
-                                    </div>
-                                <h2>Tillie Burns</h2>
-                                <p>Marketing Manager</p>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="content05_sliderlist_box">
-                                <div class="content05_img">
-                                    <img src="images/agent/agent-3.jpg" alt="Derrick Leo image">
-                                    <div class="content05_icons">
-                                        <a href="#" class="twitter">
-                                            <i class="fab fa-twitter"></i>
-                                        </a>
-                                        <a href="#" class="instagram">
-                                            <i class="fab fa-instagram"></i>
-                                        </a>
-                                        <a href="#" class="facebook">
-                                            <i class="fab fa-facebook-f"></i>
-                                        </a>
-                                    </div>
-                                    <h2>Derrick Leo</h2>
-                                    <p>Company Agent</p>
-                                </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="content05_sliderlist_box">
-                                <div class="content05_img">
-                                    <img src="images/agent/agent-4.jpg" alt="hyebins image">
-                                    <div class="content05_icons">
-                                        <a href="#" class="twitter">
-                                            <i class="fab fa-twitter"></i>
-                                        </a>
-                                        <a href="#" class="instagram">
-                                            <i class="fab fa-instagram"></i>
-                                        </a>
-                                        <a href="#" class="facebook">
-                                            <i class="fab fa-facebook-f"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <h2>hyebins</h2>
-                                <p>Saler Manager</p>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="content05_sliderlist_box">
-                                    <div class="content05_img">
-                                    <img src="images/agent/agent-3.jpg" alt="Matthew Robbins image">
-                                    <div class="content05_icons">
-                                        <a href="#" class="twitter">
-                                            <i class="fab fa-twitter"></i>
-                                        </a>
-                                        <a href="#" class="instagram">
-                                            <i class="fab fa-instagram"></i>
-                                        </a>
-                                        <a href="#" class="facebook">
-                                            <i class="fab fa-facebook-f"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <h2>Matthew Robbins</h2>
-                                <p>Founder & Ceo</p>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="content05_sliderlist_box">
-                                <div class="content05_img">
-                                    <img src="images/agent/agent-4.jpg" alt="">
-                                    <div class="content05_icons">
-                                        <a href="#" class="twitter">
-                                            <i class="fab fa-twitter"></i>
-                                        </a>
-                                        <a href="#" class="instagram">
-                                            <i class="fab fa-instagram"></i>
-                                        </a>
-                                        <a href="#" class="facebook">
-                                            <i class="fab fa-facebook-f"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <h2>Tillie Burns</h2>
-                                <p>Marketing Manager</p>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="content05_sliderlist_box">
-                                <div class="content05_img">
-                                    <img src="images/agent/agent-1.jpg" alt="Derrick Leo image">
-                                    <div class="content05_icons">
-                                        <a href="#" class="twitter">
-                                            <i class="fab fa-twitter"></i>
-                                        </a>
-                                        <a href="#" class="instagram">
-                                            <i class="fab fa-instagram"></i>
-                                        </a>
-                                        <a href="#" class="facebook">
-                                            <i class="fab fa-facebook-f"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <h2>Derrick Leo</h2>
-                                <p>Company Agent</p>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="content05_sliderlist_box">
-                                <div class="content05_img">
-                                    <img src="images/agent/agent-2.jpg" alt="hyebins image">
-                                    <div class="content05_icons">
-                                        <a href="#" class="twitter">
-                                            <i class="fab fa-twitter"></i>
-                                        </a>
-                                        <a href="#" class="instagram">
-                                            <i class="fab fa-instagram"></i>
-                                        </a>
-                                        <a href="#" class="facebook">
-                                            <i class="fab fa-facebook-f"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <h2>hyebins</h2>
-                                <p>Saler Manager</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="content05_left_arw arrow"><i class="fas fa-angle-left"></i></div>
-                    <div class="content05_right_arw arrow"><i class="fas fa-angle-left"></i></div>
+                <div class="content02_text">
+                  <h3>Korea Riviera Villa</h3>
+                  <div class="content02_text_middle">
+                    <p>
+                      <i class="fas fa-map-marker-alt"></i>180 Jack Road,
+                      London,KR
+                    </p>
+                    <p><i class="fas fa-key"></i>Apart</p>
+                  </div>
+                  <div class="content02_text_btm">
+                    <h3>$1900</h3>
+                    <p>/month</p>
+                  </div>
                 </div>
-            </div>
-        </div>
-        <div class="content06 container container-top-bottom">
-            <p class="title_p">BLOG & EVENTS</p>
-            <h1 class="title_h1">News Latest</h1>
-            <ul>
-                <li>
-                    <div class="content06_img">
-                        <img src="images/blog/latest-1.jpg" alt="">
-                    </div>
-                    <div class="content06_text">
-                        <span><i class="fas fa-user"></i>Mac Miller</span>
-                        <span><i class="far fa-clock"></i>8th Jan, 2019</span>
-                        <h3><a href="#">Enhance Your Brand Potential With Giant.</a></h3>
-                    </div>
-                </li>
-                <li>
-                    <div class="content06_img">
-                        <img src="images/blog/latest-2.jpg" alt="">
-                    </div>
-                    <div class="content06_text">
-                        <span><i class="fas fa-user"></i>Mac Miller</span>
-                        <span><i class="far fa-clock"></i>18th Jan, 2019</span>
-                        <h3><a href="#">Illustration In Marketing Materials</a></h3>
-                    </div>
-                </li>
-                <li>
-                    <div class="content06_img">
-                        <img src="images/blog/latest-3.jpg" alt="">
-                    </div>
-                    <div class="content06_text">
-                        <span><i class="fas fa-user"></i>Mac Miller</span>
-                        <span><i class="far fa-clock"></i>18th Jan, 2019</span>
-                        <h3><a href="#">Branding Do YoU Know Who You Are</a></h3>
-                    </div>
-                </li>
+                <ul class="content02_info">
+                  <li><i class="fas fa-arrows-alt"></i>780 sqft</li>
+                  <li><i class="fas fa-bed"></i>4</li>
+                  <li><i class="fas fa-shower"></i>3</li>
+                  <li><i class="fas fa-car"></i>1</li>
+                </ul>
+              </li>
+              <li class="slider_content">
+                <div class="content02_img">
+                  <img src="images/feature/feature-1.jpg" alt="first house" />
+                  <span class="content02_txt_left feature_btn">FEAUTURE</span>
+                  <span class="content02_txt_right sale_btn">FOR SALE</span>
+                  <div class="content02_btm">
+                    <img
+                      src="images/feature/f-author-1.jpg"
+                      alt="Jonathan Walters image"
+                    />
+                    <span class="content02_txt_btm">Jonathan Walters</span>
+                  </div>
+                </div>
+                <div class="content02_text">
+                  <h3>Japen Riviera Villa</h3>
+                  <div class="content02_text_middle">
+                    <p>
+                      <i class="fas fa-map-marker-alt"></i>180 Japen sola Road,
+                      London
+                    </p>
+                    <p><i class="fas fa-key"></i>Villa</p>
+                  </div>
+                  <div class="content02_text_btm">
+                    <h3>$9900</h3>
+                    <p>/month</p>
+                  </div>
+                </div>
+                <ul class="content02_info">
+                  <li><i class="fas fa-arrows-alt"></i>300 sqft</li>
+                  <li><i class="fas fa-bed"></i>8</li>
+                  <li><i class="fas fa-shower"></i>2</li>
+                  <li><i class="fas fa-car"></i>2</li>
+                </ul>
+              </li>
+              <li class="slider_content">
+                <div class="content02_img">
+                  <img src="images/feature/feature-4.jpg" alt="first house" />
+                  <span class="content02_txt_left feature_btn">FEAUTURE</span>
+                  <span class="content02_txt_right sale_btn">FOR SALE</span>
+                  <div class="content02_btm">
+                    <img
+                      src="images/feature/f-author-1.jpg"
+                      alt="Jonathan Walters image"
+                    />
+                    <span class="content02_txt_btm">Jonathan Walters</span>
+                  </div>
+                </div>
+                <div class="content02_text">
+                  <h3>French Riviera Villa</h3>
+                  <div class="content02_text_middle">
+                    <p>
+                      <i class="fas fa-map-marker-alt"></i>180 New York Road,
+                      London
+                    </p>
+                    <p><i class="fas fa-key"></i>Villa</p>
+                  </div>
+                  <div class="content02_text_btm">
+                    <h3>$5900</h3>
+                    <p>/month</p>
+                  </div>
+                </div>
+                <ul class="content02_info">
+                  <li><i class="fas fa-arrows-alt"></i>780 sqft</li>
+                  <li><i class="fas fa-bed"></i>4</li>
+                  <li><i class="fas fa-shower"></i>3</li>
+                  <li><i class="fas fa-car"></i>1</li>
+                </ul>
+              </li>
+              <li class="slider_content">
+                <div class="content02_img">
+                  <img src="images/feature/feature-5.jpg" alt="first house" />
+                  <span class="content02_txt_left feature_btn">FEAUTURE</span>
+                  <span class="content02_txt_right sale_btn">FOR SALE</span>
+                  <div class="content02_btm">
+                    <img
+                      src="images/feature/f-author-2.jpg"
+                      alt="Jonathan Walters image"
+                    />
+                    <span class="content02_txt_btm">Jonathan Walters</span>
+                  </div>
+                </div>
+                <div class="content02_text">
+                  <h3>Korea Riviera Villa</h3>
+                  <div class="content02_text_middle">
+                    <p>
+                      <i class="fas fa-map-marker-alt"></i>180 Jack Road,
+                      London,KR
+                    </p>
+                    <p><i class="fas fa-key"></i>Apart</p>
+                  </div>
+                  <div class="content02_text_btm">
+                    <h3>$1900</h3>
+                    <p>/month</p>
+                  </div>
+                </div>
+                <ul class="content02_info">
+                  <li><i class="fas fa-arrows-alt"></i>780 sqft</li>
+                  <li><i class="fas fa-bed"></i>4</li>
+                  <li><i class="fas fa-shower"></i>3</li>
+                  <li><i class="fas fa-car"></i>1</li>
+                </ul>
+              </li>
+              <li class="slider_content">
+                <div class="content02_img">
+                  <img src="images/feature/feature-1.jpg" alt="first house" />
+                  <span class="content02_txt_left feature_btn">FEAUTURE</span>
+                  <span class="content02_txt_right sale_btn">FOR SALE</span>
+                  <div class="content02_btm">
+                    <img
+                      src="images/feature/f-author-1.jpg"
+                      alt="Jonathan Walters image"
+                    />
+                    <span class="content02_txt_btm">Jonathan Walters</span>
+                  </div>
+                </div>
+                <div class="content02_text">
+                  <h3>Japen Riviera Villa</h3>
+                  <div class="content02_text_middle">
+                    <p>
+                      <i class="fas fa-map-marker-alt"></i>180 Japen sola Road,
+                      London
+                    </p>
+                    <p><i class="fas fa-key"></i>Villa</p>
+                  </div>
+                  <div class="content02_text_btm">
+                    <h3>$9900</h3>
+                    <p>/month</p>
+                  </div>
+                </div>
+                <ul class="content02_info">
+                  <li><i class="fas fa-arrows-alt"></i>300 sqft</li>
+                  <li><i class="fas fa-bed"></i>8</li>
+                  <li><i class="fas fa-shower"></i>2</li>
+                  <li><i class="fas fa-car"></i>2</li>
+                </ul>
+              </li>
             </ul>
+          </div>
         </div>
-        <div class="content07 container">
-            <ul>
-                <li>
-                    <a href="#">
-                        <img src="images/partner/partner-1.png" alt="real estate image">
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="images/partner/partner-2.png" alt="home rife image">
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="images/partner/partner-3.png" alt="kingfat image">
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="images/partner/partner-4.png" alt="real starts">
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="images/partner/partner-5.png" alt="searching">
-                    </a>
-                </li>
-            </ul>
+        <div id="dot-js" style="text-align: center">
+          <span data-dot="0" class="dot dot_act"></span>
+          <span data-dot="1" class="dot"></span>
+          <span data-dot="2" class="dot none_dot"></span>
         </div>
+      </div>
+      <div class="content03">
+        <div class="video_sec">
+          <a id="video-js" href="#"><i class="fas fa-play"></i></a>
+        </div>
+        <h3>FIND THE PERFECT</h3>
+        <h2>Real Estate Agent Near You</h2>
+      </div>
+      <div class="content03_video" id="video_box">
+        <span id="video_close"><i class="fas fa-times"></i></span>
+        <video controls width="70%" height="70%">
+          <source src="/media/examples/flower.webm" type="video/webm" />
+        </video>
+      </div>
+      <div class="content04">
+        <div class="container container-top-bottom">
+          <div class="content04_title">
+            <div class="content04_title_left">
+              <p class="title_p">TOP PROPERTY FOR YOU</p>
+              <h1 class="title_h1">Top Properties</h1>
+            </div>
+            <div class="content04_title_right">
+              <a href="#">View All Property</a>
+            </div>
+          </div>
+          <div class="content04_box">
+            <div class="content04_sliderbox">
+              <ul class="content04_cnt">
+                <li class="content04_slider">
+                  <div class="content04_cnt_img">
+                    <img src="images/properties/property-1.jpg" alt="" />
+                  </div>
+                  <div class="content04_cnt_text">
+                    <span class="sale_btn">FOR SALE</span>
+                    <h2>Villa 9721 Glen Creek</h2>
+                    <div class="content04_cnt_text_middle">
+                      <span>Start From:</span>
+                      <h3>$3.000.000</h3>
+                      <p>
+                        <i class="fas fa-map-marker-alt"></i>9721 Glen Creek
+                        Ave. Ballston spa,NY
+                      </p>
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing
+                        elit. Repellendus, minus non! Voluptatibus doloremque
+                        beatae molestiae aperiam illo libero laborum quibusdam
+                        repellat excepturi mollitia aliquid .
+                      </p>
+                    </div>
+                    <ul>
+                      <li><i class="fas fa-arrows-alt"></i>5201</li>
+                      <li><i class="fas fa-bed"></i>8 Bed Rooms</li>
+                      <li><i class="fas fa-shower"></i>7 Bath Rooms</li>
+                      <li><i class="fas fa-car"></i>1 Garage</li>
+                    </ul>
+                    <p class="contact">Contact:(+82) 82 7951</p>
+                  </div>
+                </li>
+                <li class="content04_slider">
+                  <div class="content04_cnt_img">
+                    <img src="images/properties/property-2.jpg" alt="" />
+                  </div>
+                  <div class="content04_cnt_text">
+                    <span class="sale_btn">FOR SALE</span>
+                    <h2>Villa 9721 Glen Creek</h2>
+                    <div class="content04_cnt_text_middle">
+                      <span>Start From:</span>
+                      <h3>$3.000.000</h3>
+                      <p>
+                        <i class="fas fa-map-marker-alt"></i>9721 Glen Creek
+                        Ave. Ballston spa,NY
+                      </p>
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing
+                        elit. Repellendus, minus non! Voluptatibus doloremque
+                        beatae molestiae aperiam illo libero laborum quibusdam
+                        repellat excepturi mollitia aliquid .
+                      </p>
+                    </div>
+                    <ul>
+                      <li><i class="fas fa-arrows-alt"></i>5201</li>
+                      <li><i class="fas fa-bed"></i>8 Bed Rooms</li>
+                      <li><i class="fas fa-shower"></i>7 Bath Rooms</li>
+                      <li><i class="fas fa-car"></i>1 Garage</li>
+                    </ul>
+                    <p class="contact" style="bottom: 0; padding-top: 30px">
+                      Contact:(+82) 82 7951
+                    </p>
+                  </div>
+                </li>
+                <li class="content04_slider">
+                  <div class="content04_cnt_img">
+                    <img src="images/properties/property-3.jpg" alt="" />
+                  </div>
+                  <div class="content04_cnt_text">
+                    <span class="sale_btn">FOR SALE</span>
+                    <h2>Villa 9721 Glen Creek</h2>
+                    <div class="content04_cnt_text_middle">
+                      <span>Start From:</span>
+                      <h3>$3.000.000</h3>
+                      <p>
+                        <i class="fas fa-map-marker-alt"></i>9721 Glen Creek
+                        Ave. Ballston spa,NY
+                      </p>
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing
+                        elit. Repellendus, minus non! Voluptatibus doloremque
+                        beatae molestiae aperiam illo libero laborum quibusdam
+                        repellat excepturi mollitia aliquid .
+                      </p>
+                    </div>
+                    <ul>
+                      <li><i class="fas fa-arrows-alt"></i>5201</li>
+                      <li><i class="fas fa-bed"></i>8 Bed Rooms</li>
+                      <li><i class="fas fa-shower"></i>7 Bath Rooms</li>
+                      <li><i class="fas fa-car"></i>1 Garage</li>
+                    </ul>
+                    <p class="contact" style="bottom: 0; padding-top: 30px">
+                      Contact:(+82) 82 7951
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="content04_left_arw arrow">
+              <i class="fas fa-angle-left"></i>
+            </div>
+            <div class="content04_right_arw arrow">
+              <i class="fas fa-angle-left"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="content05 container-top-bottom">
+        <div class="container">
+          <p class="title_p">WE ARE TO HELP YOU</p>
+          <h1 class="title_h1">Our Agents</h1>
+          <div class="contentbx">
+            <div class="content05_sliderbox">
+              <ul id="agent-js">
+                <li>
+                  <div class="content05_sliderlist_box">
+                    <div class="content05_img">
+                      <img
+                        src="images/agent/agent-1.jpg"
+                        alt="Matthew Robbins image"
+                      />
+                      <div class="content05_icons">
+                        <a href="#" class="twitter">
+                          <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="instagram">
+                          <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="facebook">
+                          <i class="fab fa-facebook-f"></i>
+                        </a>
+                      </div>
+                    </div>
+                    <h2>Matthew Robbins</h2>
+                    <p>Founder & Ceo</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="content05_sliderlist_box">
+                    <div class="content05_img">
+                      <img src="images/agent/agent-2.jpg" alt="" />
+                      <div class="content05_icons">
+                        <a href="#" class="twitter">
+                          <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="instagram">
+                          <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="facebook">
+                          <i class="fab fa-facebook-f"></i>
+                        </a>
+                      </div>
+                    </div>
+                    <h2>Tillie Burns</h2>
+                    <p>Marketing Manager</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="content05_sliderlist_box">
+                    <div class="content05_img">
+                      <img
+                        src="images/agent/agent-3.jpg"
+                        alt="Derrick Leo image"
+                      />
+                      <div class="content05_icons">
+                        <a href="#" class="twitter">
+                          <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="instagram">
+                          <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="facebook">
+                          <i class="fab fa-facebook-f"></i>
+                        </a>
+                      </div>
+                      <h2>Derrick Leo</h2>
+                      <p>Company Agent</p>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="content05_sliderlist_box">
+                    <div class="content05_img">
+                      <img src="images/agent/agent-4.jpg" alt="hyebins image" />
+                      <div class="content05_icons">
+                        <a href="#" class="twitter">
+                          <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="instagram">
+                          <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="facebook">
+                          <i class="fab fa-facebook-f"></i>
+                        </a>
+                      </div>
+                    </div>
+                    <h2>hyebins</h2>
+                    <p>Saler Manager</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="content05_sliderlist_box">
+                    <div class="content05_img">
+                      <img
+                        src="images/agent/agent-3.jpg"
+                        alt="Matthew Robbins image"
+                      />
+                      <div class="content05_icons">
+                        <a href="#" class="twitter">
+                          <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="instagram">
+                          <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="facebook">
+                          <i class="fab fa-facebook-f"></i>
+                        </a>
+                      </div>
+                    </div>
+                    <h2>Matthew Robbins</h2>
+                    <p>Founder & Ceo</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="content05_sliderlist_box">
+                    <div class="content05_img">
+                      <img src="images/agent/agent-4.jpg" alt="" />
+                      <div class="content05_icons">
+                        <a href="#" class="twitter">
+                          <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="instagram">
+                          <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="facebook">
+                          <i class="fab fa-facebook-f"></i>
+                        </a>
+                      </div>
+                    </div>
+                    <h2>Tillie Burns</h2>
+                    <p>Marketing Manager</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="content05_sliderlist_box">
+                    <div class="content05_img">
+                      <img
+                        src="images/agent/agent-1.jpg"
+                        alt="Derrick Leo image"
+                      />
+                      <div class="content05_icons">
+                        <a href="#" class="twitter">
+                          <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="instagram">
+                          <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="facebook">
+                          <i class="fab fa-facebook-f"></i>
+                        </a>
+                      </div>
+                    </div>
+                    <h2>Derrick Leo</h2>
+                    <p>Company Agent</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="content05_sliderlist_box">
+                    <div class="content05_img">
+                      <img src="images/agent/agent-2.jpg" alt="hyebins image" />
+                      <div class="content05_icons">
+                        <a href="#" class="twitter">
+                          <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="instagram">
+                          <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="facebook">
+                          <i class="fab fa-facebook-f"></i>
+                        </a>
+                      </div>
+                    </div>
+                    <h2>hyebins</h2>
+                    <p>Saler Manager</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="content05_left_arw arrow">
+              <i class="fas fa-angle-left"></i>
+            </div>
+            <div class="content05_right_arw arrow">
+              <i class="fas fa-angle-left"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="content06 container container-top-bottom">
+        <p class="title_p">BLOG & EVENTS</p>
+        <h1 class="title_h1">News Latest</h1>
+        <ul>
+          <li>
+            <div class="content06_img">
+              <img src="images/blog/latest-1.jpg" alt="" />
+            </div>
+            <div class="content06_text">
+              <span><i class="fas fa-user"></i>Mac Miller</span>
+              <span><i class="far fa-clock"></i>8th Jan, 2019</span>
+              <h3><a href="#">Enhance Your Brand Potential With Giant.</a></h3>
+            </div>
+          </li>
+          <li>
+            <div class="content06_img">
+              <img src="images/blog/latest-2.jpg" alt="" />
+            </div>
+            <div class="content06_text">
+              <span><i class="fas fa-user"></i>Mac Miller</span>
+              <span><i class="far fa-clock"></i>18th Jan, 2019</span>
+              <h3><a href="#">Illustration In Marketing Materials</a></h3>
+            </div>
+          </li>
+          <li>
+            <div class="content06_img">
+              <img src="images/blog/latest-3.jpg" alt="" />
+            </div>
+            <div class="content06_text">
+              <span><i class="fas fa-user"></i>Mac Miller</span>
+              <span><i class="far fa-clock"></i>18th Jan, 2019</span>
+              <h3><a href="#">Branding Do YoU Know Who You Are</a></h3>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="content07 container">
+        <ul>
+          <li>
+            <a href="#">
+              <img src="images/partner/partner-1.png" alt="real estate image" />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="images/partner/partner-2.png" alt="home rife image" />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="images/partner/partner-3.png" alt="kingfat image" />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="images/partner/partner-4.png" alt="real starts" />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="images/partner/partner-5.png" alt="searching" />
+            </a>
+          </li>
+        </ul>
+      </div>
     </main>
     <footer>
-        <div class="footer_sec container">
-            <div class="footer_first">
-                <img src="images/footer-logo.png" alt="Azenta logo">
-                <p>Subscribe our newsletter gor get norification about new updates.</p>
-                <form action="#">
-                    <input type="text" placeholder="Enter your e-mail">
-                    <button type="submit"><i class="far fa-hand-pointer"></i></button>
-                </form>
-            </div>
-            <div class="footer_second">
-                <h2>Property City</h2>
-                <div class="footer_second_btm">
-                    <ul>
-                        <li>
-                            <a href="#">
-                                <i class="fas fa-play"></i>Florida
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fas fa-play"></i>New York
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fas fa-play"></i>Washington
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fas fa-play"></i>Los Angeles
-                            </a>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li>
-                            <a href="#">
-                                <i class="fas fa-play"></i>Korea
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fas fa-play"></i>Japen
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fas fa-play"></i>China
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fas fa-play"></i>Aus
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer_third">
-                <h2>Social</h2>
-                <ul>
-                    <li><a href="#"><i class="fab fa-facebook-f"></i>Facebook</a></li>
-                    <li><a href="#"><i class="fab fa-instagram"></i>instagram</a></li>
-                    <li><a href="#"><i class="fab fa-twitter"></i>Twitter</a></li>
-                    <li><a href="#"><i class="fab fa-google"></i>Google+</a></li>
-                </ul>
-            </div>
-            <div class="footer_fourth">
-                <h2>Contact Us</h2>
-                <ul>
-                    <li>
-                        <a href="#">
-                            <i class="fas fa-map-marker-alt"></i>16 Creek Ave.Farming
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="fas fa-phone-alt"></i>(+82) 10 1234 5678
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="fas fa-envelope"></i>mail@gmail.com
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="far fa-clock"></i>mail@gmail.com
-                        </a>
-                    </li>
-                </ul>
-            </div>
+      <div class="footer_sec container">
+        <div class="footer_first">
+          <img src="images/footer-logo.png" alt="Azenta logo" />
+          <p>
+            Subscribe our newsletter gor get norification about new updates.
+          </p>
+          <form action="#">
+            <input type="text" placeholder="Enter your e-mail" />
+            <button type="submit"><i class="far fa-hand-pointer"></i></button>
+          </form>
         </div>
-        <div class="footer_info">
-            <p>Copyright ©2020 All rights reserved | This template is made with by Colorlib</p>
+        <div class="footer_second">
+          <h2>Property City</h2>
+          <div class="footer_second_btm">
+            <ul>
+              <li>
+                <a href="#"> <i class="fas fa-play"></i>Florida </a>
+              </li>
+              <li>
+                <a href="#"> <i class="fas fa-play"></i>New York </a>
+              </li>
+              <li>
+                <a href="#"> <i class="fas fa-play"></i>Washington </a>
+              </li>
+              <li>
+                <a href="#"> <i class="fas fa-play"></i>Los Angeles </a>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <a href="#"> <i class="fas fa-play"></i>Korea </a>
+              </li>
+              <li>
+                <a href="#"> <i class="fas fa-play"></i>Japen </a>
+              </li>
+              <li>
+                <a href="#"> <i class="fas fa-play"></i>China </a>
+              </li>
+              <li>
+                <a href="#"> <i class="fas fa-play"></i>Aus </a>
+              </li>
+            </ul>
+          </div>
         </div>
+        <div class="footer_third">
+          <h2>Social</h2>
+          <ul>
+            <li>
+              <a href="#"><i class="fab fa-facebook-f"></i>Facebook</a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-instagram"></i>instagram</a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-twitter"></i>Twitter</a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-google"></i>Google+</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer_fourth">
+          <h2>Contact Us</h2>
+          <ul>
+            <li>
+              <a href="#">
+                <i class="fas fa-map-marker-alt"></i>16 Creek Ave.Farming
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fas fa-phone-alt"></i>(+82) 10 1234 5678
+              </a>
+            </li>
+            <li>
+              <a href="#"> <i class="fas fa-envelope"></i>mail@gmail.com </a>
+            </li>
+            <li>
+              <a href="#"> <i class="far fa-clock"></i>mail@gmail.com </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer_info">
+        <p>
+          Copyright ©2020 All rights reserved | This template is made with by
+          Colorlib
+        </p>
+      </div>
     </footer>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/slider.js"></script>
-</body>
-
+  </body>
 </html>
