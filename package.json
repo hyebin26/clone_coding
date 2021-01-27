@@ -1,0 +1,22 @@
+{
+  "name": "clone_coding",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hyebin26/clone_coding.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hyebin26/clone_coding/issues"
+  },
+  "homepage": "https://github.com/hyebin26/clone_coding#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
