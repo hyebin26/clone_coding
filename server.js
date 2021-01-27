@@ -8,13 +8,6 @@ app.get("/", (req, res) => {
   res.sendFile(__dirname + "/index.html");
 });
 
-app.get("/property", (req, res) => {
-  res.sendFile(__dirname + "/property.html");
-});
-app.get("/pages", (req, res) => {
-  res.sendFile(__dirname + "/pages.html");
-});
-
 app.listen(port, () => {
   console.log(`server is listening at localhost:3000`);
 });
