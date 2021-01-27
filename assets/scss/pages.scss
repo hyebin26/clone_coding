@@ -1,0 +1,319 @@
+@import "style.scss";
+@import "property.scss";
+
+@import url(https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins&display=swap);
+
+$primary: #007bff;
+$secondary: #6c757d;
+$success: #28a745;
+$info:#2cbdb8;
+$warning: #ffc107;
+$danger: #dc3545;
+$light: #f8f9fa;
+$dark: #343a40;
+$light_info: #D5F2F1;
+$baground_color: rgba(28, 28, 28, 0.6);
+$btm_color :#1c1c1c;
+
+$main_width: 1170px;
+$first_width: 940px;
+$second_width: 720px;
+$third_width: 540px;
+$fourth_width: 400px;
+
+.pages_title{
+    font-size:22px;
+    margin-bottom:20px;
+}
+
+.greeting_slider_list{
+    background-image: url("images/hero/hero-1.jpg");
+}
+main{
+    .pages_content_sec{
+        .pages_content_container{
+            display:flex;
+            justify-content: space-between;
+            margin-top:50px;
+            .pages_content_left{
+                    flex:0 0 73%;
+                .pages_left_main{
+                    position: relative;
+                    img{width:100%;height:100%;display:block;}
+                    .pages_content_icons{
+                        position: absolute;
+                        top:0;
+                        left:-50px;
+                        li{
+                            width:40px;
+                            height:40px;
+                            border: 1px solid #ebebeb;
+                            border-radius: 30px;
+                            margin-bottom:10px;
+                            background: white;
+                            text-align:center;
+                            line-height:40px;
+                            transition: all .3s;
+                            &:hover{
+                                background:$info;
+                                i{color:white;}
+                            }
+                            i{color:#707079;margin:0;}
+                        }
+                    }
+                    .pages_left_main_image{
+                        position: relative;
+                        margin-bottom:10px;
+                    }
+                    .pages_left_thumbnail{
+                        display:flex;
+                        justify-content: space-between;
+                        li{
+                            flex: 0 0 19%;
+                            cursor:pointer;
+                            transition: all .3s;
+                            .pages_left_thumbnail_li_box{
+                                img{width:100%;}
+                            }
+                            &:hover{
+                                opacity:0.7;
+                            }
+                        }
+                    }
+                }
+                .pages_left_description{
+                    margin-top:50px;
+                    margin-bottom: 50px;
+                    .pages_description_tab{
+                        margin-top: 40px;
+                        .tab_title{
+                            border-top:1px solid lightgray;
+                            border-left:1px solid lightgray;
+                            border-right: 1px solid lightgray;
+                            a{color: #707079;}
+                            display:flex;
+                            width:100%;
+                            background:#F2F4F5;
+                            li{
+                                padding:10px 20px;
+                                margin-top:-1px;
+                            }
+                            .tab_active{
+                                background: $info;
+                                a{color:white;}
+                            }
+                        }
+                        .pages_description_hide{
+                            display:none;
+                            border:1px solid lightgray;
+                            padding:10px 30px;
+                            .pd_name{
+                                width: 150px;
+                            }
+                            li{
+                                border-bottom: 1px solid lightgray;
+                                padding: 7px 0;
+                                span{display:inline-block;}
+                            }
+                        }
+                        .tab_active{display:block;}
+                    }
+
+                }
+                .pages_left_map{
+                    .map_container{
+                        height:320px;
+                    }
+                }
+                .pages_left_contact{
+                    margin-top:50px;
+                }
+                .pages_contact_container{
+                    display:flex;
+                    justify-content: space-between;
+                    margin-bottom:100px;
+                    .pages_contact_left{
+                        flex: 0 0 45%;
+                        span{
+                            font-size:13px;
+                            color: #aaaab3;
+                        }
+                        p{font-size:13px;letter-spacing: .5px;}
+                        .contact_icons{
+                            display:flex;
+                            li{
+                                padding:5px 5px;
+                                i{color: #aaaab3;}
+                            }
+                        }
+                        .contact_imgbox{
+                            width:100%;
+                            img{width:100%;}
+                        }
+                    }
+                    .pages_contact_right{
+                        flex: 0 0 45%;
+                        input{
+                            display:block;
+                            width:100%;
+                            height:40px;
+                            margin-bottom:20px;
+                            padding-left:20px;
+                            background: #F2F4F5;
+                            color:#aaaab3;
+                            font-size:14px;
+                            outline:none;
+                            border:none;
+                        }
+                        textarea{
+                            width:100%;
+                            height:100px;
+                            border:none;
+                            outline:none;
+                            padding-left:20px;
+                            padding-top:12px;
+                            background: #F2F4F5;
+                            color: #aaaab3;
+                            font-size:14px;
+                            resize:none;
+                            margin-bottom:24px;
+                            font-family: inherit;
+                        }
+                        button{
+                            display: inline-block;
+                            font-size: 14px;
+                            color: #ffffff;
+                            background: #2cbdb8;
+                            padding: 8px 30px;
+                            border: 1px solid #2cbdb8;
+                        }
+                    }
+                }
+            }
+            .pages_content_right{
+                flex: 0 0 23%;
+                .property_btn{
+                    display:flex;
+                    .property_buy{
+                        flex:0 0 50%;
+                    }   
+                    .property_rent{
+                        flex:0 0 50%;
+                    }
+                }
+                .property_search_select{
+                    padding: 15px 0;
+                    li{
+                        padding:10px 0;
+                    }
+                }
+                .property_search_btn{
+                    padding:20px 0;
+                    button{
+                        width:100%;
+                        border:none;
+                        background: $info;
+                        outline:none;
+                        padding: 10px 0;
+                        cursor: pointer;
+                        color:white;
+                        font-size:17px;
+                        font-weight: 500;
+                    }
+                }
+                .property_search_agent_box{
+                    display:flex;
+                    justify-content: space-between;
+                    .property_agent_img{
+                        flex: 0 0 45%;
+                    }
+                    .property_agent_text{
+                        flex: 0 0 50%;
+                    }
+                    h4{color:black;font-size:17px;}
+                    p{font-size:13px;padding:5px 0;}
+                    span{color:$info;font-size:15px;}
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px){
+    main{
+        .pages_content_sec{
+            .pages_content_container{
+                .pages_content_right{
+                    .property_search_agent_box{
+                        display:block;
+                        margin-bottom:5px;
+                        p{padding:0;}
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 990px){
+    main{
+        .pages_content_sec{
+            .pages_content_container{
+                display:block;
+                .pages_content_left{
+                    .pages_left_main{
+                        .pages_content_icons{
+                            position: relative;
+                            left:0;
+                            ul{
+                                display:flex;
+                                justify-content: center;
+                                li{margin-right:10px;}
+                            }
+                        }
+                    }
+                }
+                .pages_content_right{
+                    .property_search_agent{
+                        padding-bottom:20px;
+                        ul{
+                            display:flex;
+                            li{margin-right:30px;
+                                img{width:100%;}
+                            }
+                        }
+                    }
+                    .property_search_agent_box{
+                        display:block;
+                        margin-bottom:5px;
+                        p{padding:0;}
+                    }
+                }
+            }
+        }    
+    }
+    footer{
+        .footer_sec{
+            display:block;
+        }
+    }
+}
+
+@media (max-width: 560px){
+    main{
+        .pages_content_sec{
+            .pages_content_container{
+                .pages_content_left{
+                    .pages_contact_container{
+                        display:block;
+                        .pages_contact_left{
+                            margin-bottom:20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
