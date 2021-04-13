@@ -54,23 +54,23 @@ const GreetingSlider = (function () {
 })();
 
 const PropertiesSlider = (function () {
-  const PropertieSliderBox = document.querySelector(".content04_cnt");
-  const PropertieSlider = PropertieSliderBox.querySelectorAll(
+  const propertieSliderBox = document.querySelector(".content04_cnt");
+  const propertieSlider = propertieSliderBox.querySelectorAll(
     ".content04_slider"
   );
   const leftBtn = document.querySelector(".content04_left_arw");
   const rightBtn = document.querySelector(".content04_right_arw");
 
-  let PropertieSliderWidth = PropertieSlider[0].offsetWidth;
+  let propertieSliderWidth = propertieSlider[0].offsetWidth;
   let count = 0;
-  PropertieSliderBox.style.left = PropertieSliderWidth * count;
+  propertieSliderBox.style.left = propertieSliderWidth * count;
 
   const clickRight = () => {
     count++;
     if (count === 3) {
       count = 0;
     }
-    PropertieSliderBox.style.left = -PropertieSliderWidth * count + "px";
+    propertieSliderBox.style.left = -propertieSliderWidth * count + "px";
   };
 
   const clickLeft = () => {
@@ -78,7 +78,7 @@ const PropertiesSlider = (function () {
     if (count < 0) {
       count = 2;
     }
-    PropertieSliderBox.style.left = -PropertieSliderWidth * count + "px";
+    propertieSliderBox.style.left = -propertieSliderWidth * count + "px";
   };
 
   const init = () => {
@@ -88,8 +88,8 @@ const PropertiesSlider = (function () {
   init();
 
   const matchControl = () => {
-    PropertieSliderWidth = PropertieSlider[0].offsetWidth;
-    PropertieSliderBox.style.left = PropertieSliderWidth * 0;
+    propertieSliderWidth = propertieSlider[0].offsetWidth;
+    propertieSliderBox.style.left = propertieSliderWidth * 0;
     init();
   };
 
@@ -117,15 +117,6 @@ const FeatureSlider = (function () {
   const currentSlider = (num) => {
     dotSliderBox.style.left = -dotSliderWidth * num + "px";
   };
-  /*
-    const handleSlider = ()=>{
-        number++;
-        if(number === 2){
-            number = 0;
-        }
-        currentSlider(number);
-    }
-     */
 
   const clickDot = (event) => {
     const span = event.target;
@@ -332,7 +323,6 @@ const VideoControll = (function () {
 })();
 
 const HideNav = (function () {
-  const hideNavBox = document.getElementById("hide-js");
   const hambuger = document.getElementById("menu");
   const hideNav = document.getElementById("hide-container");
   const offcanvas = document.querySelector(".offcanvas");
